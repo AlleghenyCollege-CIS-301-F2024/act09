@@ -1,0 +1,126 @@
+# perform checks on a file
+
+- writing/reflection.md:
+    - description: Ensure that writing/reflection.md file exists
+      check: ConfirmFileExists
+    # - description: Write a minimum number of meaningful words in the proposal
+    #   check: CountFileWords
+    #   options:
+    #     count: 400
+    #     exact: false
+    - description: Complete all TODOs, remove the TODO markers in writing/reflection.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the writing/reflection.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add your Data Citation Here' prompt in the writing/reflection.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add your Data Citation Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add The URL to Your Tutorial' prompt in the writing/reflection.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add The URL to Your Tutorial"
+        count: 0
+        exact: true
+
+
+
+# check the technical writing for various characteristics
+- src/myCode.r:
+    - description: Ensure that src/myCode.r file exists
+      check: ConfirmFileExists
+    # - description: Write a minimum number of meaningful words in the proposal
+    #   check: CountFileWords
+    #   options:
+    #     count: 400
+    #     exact: false
+    - description: Complete all TODOs, remove the TODO markers in src/myCode.r
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the src/myCode.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Project Title Here' in the src/myCode.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Project Title Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add your Data Citation Here' prompt in the src/myCode.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add your Data Citation Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add The URL to Your Tutorial' prompt in the src/myCode.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add The URL to Your Tutorial"
+        count: 0
+        exact: true
+
+
+
+# check the technical writing for various characteristics
+- src/tutorialCode.r:
+    - description: Ensure that src/tutorialCode.r file exists
+      check: ConfirmFileExists
+    # - description: Write a minimum number of meaningful words in the proposal
+    #   check: CountFileWords
+    #   options:
+    #     count: 400
+    #     exact: false
+    - description: Complete all TODOs, remove the TODO markers in src/tutorialCode.r
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the src/tutorialCode.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Project Title Here' in the src/tutorialCode.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Project Title Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add your Data Citation Here' prompt in the src/tutorialCode.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add your Data Citation Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add The URL to Your Tutorial' prompt in the src/tutorialCode.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add The URL to Your Tutorial"
+        count: 0
+        exact: true
+
+
+
+# count number of commits in the GitHub repository
+- description: Have at least a specific minimum number of commits (5) in repository
+  check: CountCommits
+  options:
+    count: 5
